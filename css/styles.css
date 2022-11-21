@@ -3038,6 +3038,7 @@ textarea.form-control-lg {
   opacity: 0.65;
 }
 
+/* Herunder ændres farve på forside knappen */
 .btn-primary {
   color: #fff;
   background-color: rgb(var(--bs-prime-rgb));
@@ -11328,7 +11329,7 @@ hr.divider {
   height: 0.2rem;
   max-width: 3.25rem;
   margin: 1.5rem auto;
-  /* Orange ændres her */
+  /* Linjens farve ændres her */
   background-color: rgb(var(--bs-primary-rgb)); 
   opacity: 1;
 }
@@ -11355,10 +11356,10 @@ hr.divider-light {
   padding: 0.75rem 0;
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
-  color: #f4623a;
+  color: rgb(var(--bs-prime-rgb));
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #f4623a !important;
+  color: rgb(var(--bs-prime-rgb)) !important;
 }
 @media (min-width: 992px) {
   #mainNav {
