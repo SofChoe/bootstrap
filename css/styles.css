@@ -11330,7 +11330,7 @@ hr.divider {
   max-width: 3.25rem;
   margin: 1.5rem auto;
   /* Linjens farve ændres her */
-  background-color: rgb(var(--bs-primary-rgb)); 
+  background-color: rgb(var(--bs-prime-rgb)); 
   opacity: 1;
 }
 
