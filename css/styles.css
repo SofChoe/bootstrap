@@ -35,6 +35,9 @@
   --bs-gray-900: #212529;
   /* Baggrundsfarven findes ved bs-primary */
   --bs-primary: #9f8e7b;
+  /* Jeg har tilføjet bs-prime for at se om denne farve er bedre, uden at slette primary */
+  --bs-prime: #ad8c6b;
+  --bs-shade: #5c4d42;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -44,6 +47,9 @@
   --bs-dark: #212529;
   /* Baggrundsfarven ændres ved bs-primary-rbg */
   --bs-primary-rgb: 159, 142, 123;
+    /* Jeg har tilføjet bs-prime-rgb for at se om denne farve er bedre, uden at slette primary */
+  --bs-prime-rgb: 173, 140, 107;
+  --bs-shade-rgb: 92, 77, 66;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -3034,32 +3040,33 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #f4623a;
-  border-color: #f4623a;
+  background-color: rgb(var(--bs-prime-rgb));
+  border-color: rgb(var(--bs-prime-rgb));
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #cf5331;
-  border-color: #c34e2e;
+  background-color: rgb(var(--bs-primary-rgb));
+  border-color: rgb(var(--bs-primary-rgb));
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
-  background-color: #cf5331;
-  border-color: #c34e2e;
-  box-shadow: 0 0 0 0.25rem rgba(246, 122, 88, 0.5);
+  background-color: rgb(var(--bs-primary-rgb));
+  border-color: rgb(var(--bs-primary-rgb));
+  --bs-btn-opacity:0.5;
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), var(--bs-btn-opacity));
 }
 .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #c34e2e;
-  border-color: #b74a2c;
+  background-color: rgb(var(--bs-primary-rgb));
+  border-color: rgb(var(--bs-prime-rgb));
 }
 .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgba(246, 122, 88, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-shade-rgb), var(--bs-btn-opacity));
 }
 .btn-primary:disabled, .btn-primary.disabled {
   color: #fff;
-  background-color: #f4623a;
-  border-color: #f4623a;
+  background-color: rgb(var(--bs-primary-rgb));
+  border-color: rgb(var(--bs-primary-rgb));
 }
 
 .btn-secondary {
@@ -11321,7 +11328,8 @@ hr.divider {
   height: 0.2rem;
   max-width: 3.25rem;
   margin: 1.5rem auto;
-  background-color: #f4623a;
+  /* Orange ændres her */
+  background-color: rgb(var(--bs-primary-rgb)); 
   opacity: 1;
 }
 
@@ -11443,7 +11451,8 @@ header.masthead h1, header.masthead .h1 {
   text-align: center;
   opacity: 0;
   color: #fff;
-  background: rgba(244, 98, 58, 0.9);
+  --bs-inspiration-opacity: 0.9;
+  background: rgba(var(--bs-prime-rgb), var(--bs-inspiration-opacity));
   transition: opacity 0.25s ease;
   text-align: center;
 }
