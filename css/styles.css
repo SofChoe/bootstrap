@@ -124,6 +124,7 @@ h1, .h1 {
   h1, .h1 {
     font-size: 2.5rem;
   }
+  /* @media gøre den responsive, ved at ændre på fontens størrelse, når skærmen bliver mindre end 1200px*/
 }
 
 h2, .h2 {
@@ -1386,15 +1387,18 @@ progress {
     width: 25%;
   }
 
+
   .col-lg-4 {
     flex: 0 0 auto;
     width: 33.33333333%;
   }
+  /*delt op i tre spalter pga. 33,33% produkter */
 
   .col-lg-5 {
     flex: 0 0 auto;
     width: 41.66666667%;
   }
+
 
   .col-lg-6 {
     flex: 0 0 auto;
@@ -11457,9 +11461,10 @@ header.masthead h1, header.masthead .h1 {
   transition: opacity 0.25s ease;
   text-align: center;
 }
+
 #inspiration .container-fluid .inspiration-box .inspiration-box-caption .project-category, #inspiration .container-sm .inspiration-box .inspiration-box-caption .project-category, #inspiration .container-md .inspiration-box .inspiration-box-caption .project-category, #inspiration .container-lg .inspiration-box .inspiration-box-caption .project-category, #inspiration .container-xl .inspiration-box .inspiration-box-caption .project-category, #inspiration .container-xxl .inspiration-box .inspiration-box-caption .project-category {
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 0.85rem;
+  font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
 }
